@@ -7,6 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "babylonjs": "^5.17.1",
+    "babylonjs-gui": "^5.17.1",
+    "babylonjs-loaders": "^5.17.1",
+    "babylonjs-materials": "^5.17.1",
+    "blockly": "^8.0.3",
+    "element-ui": "^2.4.5",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
@@ -15,6 +21,7 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.14"
   },
   "browserslist": [
