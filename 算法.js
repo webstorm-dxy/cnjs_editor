@@ -1,3 +1,4 @@
+/*** Encode With UTF-8 ***/
 /*Now There Is Replace JavaScript*/
 // 将ak设置为你认为列表中最多的关键词,否则会出大问题的啦~建议不要小于50哦~
 var ak=1000
@@ -49,7 +50,8 @@ var CNKey = [
     "链接",
     "语言",
     "简体中文",
-    "脚本"
+    "英文",
+    "脚本",
 ]
 var JSKey = [
     "\"",
@@ -96,7 +98,8 @@ var JSKey = [
     "a",
     "lang",
     "zh-cn",
-    "script"
+    "en",
+    "script",
 ]
 
 for (var now=0;now<=ak;now++) {
