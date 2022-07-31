@@ -46,22 +46,20 @@
       </el-collapse-item>
     </el-collapse>
     <div class="code-edit">
-      <ace-editor
-          ref="ace"
-          :value="form.content"
-          class="ace-editor"
-          :min-lines="15"
-          :mode-path="javascript"
-      ></ace-editor>
-      <!-- 只要对editScriptType赋值就可以使用对应语言的编辑器了 -->
-
+      <code-editor
+          ref="addcodeform"
+          v-model:value="cmadd.value"
+          v-model:id="cmadd.id"
+          @update:value="cmadd.value = $event"
+      ></code-editor>
     </div>
+
   </div>
 </template>
 
 <script>
-import AceEditor from "@/components/AceEditor";
-
+import CodeEditor from "@/components/CodeEditor";
+import {ref} from "vue";
 let ConsoleModelIsClick = false;
 
 export default {
@@ -73,8 +71,10 @@ export default {
 
     };
   },
-  components:{
-    AceEditor
+  components:{CodeEditor},
+  setup(){
+    const cmadd=ref({value:"",id:0});
+    return{cmadd}
   },
 
   methods: {

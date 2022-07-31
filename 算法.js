@@ -78,12 +78,13 @@ var JSKey = [
     "zh-cn",
     "script"
 ]
-var now = 0
-while (now <= ak) {
+
+//将while循环改为for循环 By:daxingyi
+for (var now=0;now<=ak;now++) {
     for (s in CNKey) {
         var i = i.replace(CNKey[s], JSKey[s])
     }
-    now += 1
 }
+
 console.log(i)
 alert(i)
