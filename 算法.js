@@ -81,8 +81,8 @@ var JSKey = [
 
 //将while循环改为for循环
 for (var now=0;now<=ak;now++) {
-    for (s in CNKey) {
-        var ripe = raw.replace(CNKey[s], JSKey[s])
+    for (listid in CNKey) {
+        var ripe = raw.replace(CNKey[listid], JSKey[listid])
     }
 }
 
