@@ -79,12 +79,11 @@ var JSKey = [
     "script"
 ]
 
-//将while循环改为for循环
 for (var now=0;now<=ak;now++) {
     for (listid in CNKey) {
-        var ripe = raw.replace(CNKey[listid], JSKey[listid])
+        var raw = raw.replace(CNKey[listid], JSKey[listid])
     }
 }
 
-console.log(ripe)
-alert(ripe)
+console.log(raw)
+alert(raw)
