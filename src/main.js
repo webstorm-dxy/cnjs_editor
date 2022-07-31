@@ -3,7 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import ace from 'ace-builds'
 
+Vue.use(ace)
 Vue.config.productionTip = false
 
 new Vue({

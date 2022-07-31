@@ -27,7 +27,7 @@
         <div>
           <span class="codeblock-class">终端</span>
           <br>
-          <span class="codeblock-func">.日志(<span class="codeblock-args">uuuuiu</span>)</span>
+          <span class="codeblock-func">.日志(<span class="codeblock-args">输出内容</span>)</span>
         </div>
         <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
       </el-collapse-item>
@@ -45,10 +45,22 @@
         <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
       </el-collapse-item>
     </el-collapse>
+    <div class="code-edit">
+      <ace-editor
+          ref="ace"
+          :value="form.content"
+          class="ace-editor"
+          :min-lines="15"
+          :mode-path="javascript"
+      ></ace-editor>
+      <!-- 只要对editScriptType赋值就可以使用对应语言的编辑器了 -->
+
+    </div>
   </div>
 </template>
 
 <script>
+import AceEditor from "@/components/AceEditor";
 
 let ConsoleModelIsClick = false;
 
@@ -57,57 +69,76 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      Text: ""
+      Text: "",
+
     };
   },
+  components:{
+    AceEditor
+  },
+
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-    consoleModel(){
-      ConsoleModelIsClick=true;
+    consoleModel() {
+      ConsoleModelIsClick = true;
     },
-    ReturnConsoleModel(){
+    ReturnConsoleModel() {
       return ConsoleModelIsClick;
     },
+
   }
 }
 </script>
 
 <style>
-.aline
-{
+.aline {
   display: inline;
 }
-.cent
-{
+
+.cent {
   text-align: center;
 }
-.block
-{
+
+.block {
   width: 200px;
   height: auto;
-}
-.fl-left
-{
   float: left;
 }
-.codeblock-func
-{
+
+.fl-left {
+  float: left;
+}
+
+.codeblock-func {
   color: #00c4ff;
   background-color: rgba(0, 196, 255, 0.24);
   border-radius: 5px;
 }
-.codeblock-class
-{
+
+.codeblock-class {
   color: #ff8800;
   background-color: rgba(255, 136, 0, 0.15);
   border-radius: 5px;
 }
-.codeblock-args
-{
-  color: #48ff00;
+
+.codeblock-args {
+  color: #288802;
   background-color: rgba(47, 255, 0, 0.15);
   border-radius: 5px;
+}
+
+.code-edit {
+  float: left;
+}
+
+.ace-container {
+  position: relative;
+}
+
+.ace-editor {
+  width: 500px;
+  height: 200px;
 }
 </style>
