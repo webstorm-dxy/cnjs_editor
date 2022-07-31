@@ -3,7 +3,7 @@
 var ak=1000
 // 你只能上面语句修改=后面的数字,不要加双/单引号!
 // 这里的代码不要动,懂了你会后悔的
-var i = "out('i')变量 i = 'u' out('a') 大于 条件循环"
+var raw = "out('i')变量 i = 'u' out('a') 大于 条件循环"
 var CNKey = [
     "out",
     "终端",
@@ -79,12 +79,12 @@ var JSKey = [
     "script"
 ]
 
-//将while循环改为for循环 By:daxingyi
+//将while循环改为for循环
 for (var now=0;now<=ak;now++) {
     for (s in CNKey) {
-        var i = i.replace(CNKey[s], JSKey[s])
+        var ripe = raw.replace(CNKey[s], JSKey[s])
     }
 }
 
-console.log(i)
-alert(i)
+console.log(ripe)
+alert(ripe)
