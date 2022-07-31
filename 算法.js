@@ -1,5 +1,9 @@
 /*Now There Is Replace JavaScript*/
-var i = "out('你个SB')变量 i = '你妈死了'"
+// 将ak设置为你认为列表中最多的关键词,否则会出大问题的啦~
+var ak=1000
+// 你只能上面语句修改=后面的数字,不要加双/单引号!
+// 这里的代码不要动,懂了你会后悔的
+var i = "out('i')变量 i = 'u' out('a') 大于 条件循环"
 var CNKey = [
     "out",
     "终端",
@@ -74,8 +78,12 @@ var JSKey = [
     "zh-cn",
     "script"
 ]
-for (s in CNKey) {
-    var i = i.replace(CNKey[s], JSKey[s])
+var now = 0
+while (now <= ak) {
+    for (s in CNKey) {
+        var i = i.replace(CNKey[s], JSKey[s])
+    }
+    now += 1
 }
 console.log(i)
 alert(i)
