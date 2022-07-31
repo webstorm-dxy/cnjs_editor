@@ -79,13 +79,11 @@ var JSKey = [
     "script"
 ]
 
-var now = 0
-while (now<=ak){
+for (var now=0;now<=ak;now++) {
     for (listid in CNKey) {
-        var ripe = raw.replace(CNKey[listid], JSKey[listid])
+        var raw = raw.replace(CNKey[listid], JSKey[listid])
     }
-    now += 1
 }
 
-console.log(ripe)
-alert(ripe)
+console.log(raw)
+alert(raw)
