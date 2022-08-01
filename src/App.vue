@@ -29,15 +29,13 @@
           <br>
           <span class="codeblock-func">.日志(<span class="codeblock-args">输出内容</span>)</span>
         </div>
-        <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
       </el-collapse-item>
       <el-collapse-item title="页面(document)" name="2">
         <div>
           <span class="codeblock-class">页面</span>
           <br>
-          <span class="codeblock-func">.书写(<span class="codeblock-args">打印内容</span>)</span>
+          <span class="codeblock-func">.插入(<span class="codeblock-args">插入内容</span>)</span>
         </div>
-        <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
       </el-collapse-item>
     </el-collapse>
     <div class="code-edit">
