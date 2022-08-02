@@ -22,7 +22,8 @@
         <el-menu-item index="3-2">运行</el-menu-item>
       </el-submenu>
     </el-menu>
-    <el-collapse v-model="activeNames" @change="handleChange" class="block" accordion>
+    <el-collapse v-model="activeNames" @change="handleChange" class="block">
+      <el-divider>JS脚本</el-divider>
       <el-collapse-item title="终端(console)" name="1">
         <div>
           <span class="codeblock-class">终端</span>
@@ -37,6 +38,7 @@
           <span class="codeblock-func">.插入(<span class="codeblock-args">插入内容</span>)</span>
         </div>
       </el-collapse-item>
+      <el-divider>H5组件</el-divider>
     </el-collapse>
     <div class="code-edit">
       <code-editor
