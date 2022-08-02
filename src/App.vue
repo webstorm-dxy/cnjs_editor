@@ -22,7 +22,7 @@
         <el-menu-item index="3-2">运行</el-menu-item>
       </el-submenu>
     </el-menu>
-    <el-collapse v-model="activeNames" @change="handleChange" class="block">
+    <el-collapse v-model="activeNames" @change="handleChange" class="block" accordion>
       <el-divider>JS脚本</el-divider>
       <el-collapse-item title="终端(console)" name="1">
         <div>
@@ -31,7 +31,7 @@
           <span class="codeblock-func">.日志(<span class="codeblock-args">输出内容</span>)</span>
         </div>
       </el-collapse-item>
-      <el-collapse-item title="页面(document)" name="2">
+      <el-collapse-item title="文档(document)" name="2">
         <div>
           <span class="codeblock-class">页面</span>
           <br>
@@ -39,6 +39,26 @@
         </div>
       </el-collapse-item>
       <el-divider>H5组件</el-divider>
+      <el-collapse-item title="字体样式" name="3">
+        <div>
+          <span class="codeblock-func">&lt;一号字体&gt;<span class="codeblock-args">内容</span>&lt;/一号字体&gt;</span><br>
+          <span class="codeblock-func">&lt;二号字体&gt;<span class="codeblock-args">内容</span>&lt;/二号字体&gt;</span><br>
+          <span class="codeblock-func">&lt;三号字体&gt;<span class="codeblock-args">内容</span>&lt;/三号字体&gt;</span><br>
+          <span class="codeblock-func">&lt;四号字体&gt;<span class="codeblock-args">内容</span>&lt;/四号字体&gt;</span><br>
+          <span class="codeblock-func">&lt;五号字体&gt;<span class="codeblock-args">内容</span>&lt;/五号字体&gt;</span><br>
+          <span class="codeblock-func">&lt;六号字体&gt;<span class="codeblock-args">内容</span>&lt;/六号字体&gt;</span>
+        </div>
+      </el-collapse-item>
+      <el-collapse-item title="富文本" name="4">
+        <div>
+          <span class="codeblock-func">&lt;超链接 href=<span class="codeblock-args">参数</span>&gt;<span class="codeblock-args">内容</span>&lt;/超链接&gt;</span><br>
+          <span class="codeblock-func">&lt;段落&gt;<span class="codeblock-args">内容</span>&lt;/段落&gt;</span><br>
+        </div>
+      </el-collapse-item>
+      <el-collapse-item title="布局" name="5">
+        <span class="codeblock-func">&lt;块&gt;<span class="codeblock-args">内容</span>&lt;/块&gt;</span><br>
+        <span class="codeblock-func">&lt;导航栏&gt;<span class="codeblock-args">内容</span>&lt;/导航栏&gt;</span><br>
+      </el-collapse-item>
     </el-collapse>
     <div class="code-edit">
       <code-editor
@@ -62,7 +82,6 @@ export default {
       activeIndex: '1',
       activeIndex2: '1',
       Text: "",
-
     };
   },
   components:{CodeEditor},
