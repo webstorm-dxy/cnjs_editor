@@ -1,5 +1,6 @@
 <template>
   <div ref="editorform" style="height: 683px;width: 1100px" class="ace-editor"></div>
+
 </template>
 <script>
 import { watch, onMounted, onBeforeUnmount, ref} from "vue";
@@ -12,6 +13,9 @@ import "ace-builds/src-noconflict/ext-emmet";
 import "ace-builds/src-noconflict/snippets/yaml";
 //import "ace-builds/src-noconflict/keybinding-vscode";
 //import "ace-builds/src-noconflict/keybinding-emacs";
+
+var geditor;
+
 export default {
   name: "CodeEditor",
   emits: ["update:value"],
@@ -44,8 +48,8 @@ export default {
     let editor = null;
     const editorform = ref(null);
     let options = {
-      theme: "ace/theme/" + (props.theme ? props.theme : "chaos"),
-      mode: "ace/mode/" + (props.language ? props.language : "yaml"),
+      theme: "ace/theme/" + (props.theme ? props.theme : "xcode"),
+      mode: "ace/mode/" + (props.language ? props.language : "javascript"),
       tabSize: 2,
       maxLines: 25,
       minLines: 25,
@@ -64,6 +68,8 @@ export default {
       //初始化
       editor = ace.edit(editorform.value, options);
       //代码提示和自动补全
+      //DEBUG
+      // console.log(editor)
       editor.setOptions({
         enableSnippets: true,
         enableLiveAutocompletion: true,
@@ -83,6 +89,7 @@ export default {
         exec: () => emit('formatter', editor)
       })
       editor.setValue(props.value ? props.value : "");
+      geditor = editor;
     }
     watch(
         () => props.id,
@@ -106,10 +113,26 @@ export default {
     onBeforeUnmount(() => {
       editor.destroy();
     });
+    //为保证BUG在未解决的情况下代码仍然能够正常运行
+    // this.InsertCode();
     return {
       editorform,
     };
+
   },
+  methods:{
+    /*
+    * InsertCode
+    * @author daxingyi
+    * @time 2022/8/2
+    * @param {String} Code
+    * @return {null} null
+    */
+    InsertCode(){
+      //TODO 没解决插入代码无效的bug
+      editor.insert("hello")
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

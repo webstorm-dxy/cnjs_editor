@@ -46,6 +46,7 @@
           @update:value="cmadd.value = $event"
       ></code-editor>
     </div>
+    <button @click="AddCode('hello')">test</button>
   </div>
 </template>
 
@@ -79,7 +80,17 @@ export default {
     ReturnConsoleModel() {
       return ConsoleModelIsClick;
     },
+    /*
+    * 向文本域中插入代码
+    * @author daxingyi
+    * @version beta1.0
+    * @param Address {} 插入位置 NOTUSE
+    * @param Code {String} 插入代码
+    */
+    //TODO：与代码编辑器接轨
+    AddCode(Code){
 
+    }
   }
 }
 </script>
@@ -125,12 +136,5 @@ export default {
   float: left;
 }
 
-.ace-container {
-  position: relative;
-}
 
-.ace-editor {
-  width: 500px;
-  height: 200px;
-}
 </style>
