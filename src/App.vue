@@ -59,6 +59,10 @@
         <span class="codeblock-func">&lt;块&gt;<span class="codeblock-args">内容</span>&lt;/块&gt;</span><br>
         <span class="codeblock-func">&lt;导航栏&gt;<span class="codeblock-args">内容</span>&lt;/导航栏&gt;</span><br>
       </el-collapse-item>
+      <el-collapse-item title="引入" name="6">
+        <span class="codeblock-func">&lt;代码&gt;<span class="codeblock-args">内容</span>&lt;/代码&gt;</span><br>
+        <span class="codeblock-func">&lt;连接 href=<span class="codeblock-args">参数</span> type=<span class="codeblock-args">参数</span> rel=<span class="codeblock-args">参数</span>&gt;<span class="codeblock-args">内容</span>&lt;/连接&gt;</span><br>
+      </el-collapse-item>
     </el-collapse>
     <div class="code-edit">
       <code-editor
