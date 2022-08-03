@@ -49,9 +49,9 @@
           <span class="codeblock-func">&lt;六号字体&gt;<span class="codeblock-args">内容</span>&lt;/六号字体&gt;</span>
         </div>
       </el-collapse-item>
-      <el-collapse-item title="富文本" name="4">
+      <el-collapse-item title="富文本组件" name="4">
         <div>
-          <span class="codeblock-func">&lt;超链接 href=<span class="codeblock-args">参数</span>&gt;<span class="codeblock-args">内容</span>&lt;/超链接&gt;</span><br>
+          <span class="codeblock-func">&lt;超链接 href=<span class="codeblock-args">链接地址</span>&gt;<span class="codeblock-args">内容</span>&lt;/超链接&gt;</span><br>
           <span class="codeblock-func">&lt;段落&gt;<span class="codeblock-args">内容</span>&lt;/段落&gt;</span><br>
         </div>
       </el-collapse-item>
